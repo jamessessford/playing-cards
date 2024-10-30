@@ -1,0 +1,46 @@
+{
+    "name": "jamessessford/cards",
+    "description": "A PHP implementation of a deck of playing cards to be used with Verbs",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PlayingCards\\": "src/"
+        },
+        "files":[
+            "./src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "James Sessford",
+            "email": "hello@jamessessford.com"
+        }
+    ],
+    "require": {
+        "hirethunk/verbs": "^0.6.3"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "pestphp/pest": "^3.5",
+        "spatie/invade": "^2.1",
+        "orchestra/testbench": "^9.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PlayingCards\\PlayingCardsServiceProvider"
+            ]
+        }
+    }
+}
