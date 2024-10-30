@@ -11,4 +11,7 @@ test('assets can be published', function (): void {
         '--provider' => 'PlayingCards\\PlayingCardsServiceProvider',
         '--force' => true,
     ]);
+
+    expect(is_dir(public_path('/vendor/playing-cards')))
+        ->toBe(true);
 });

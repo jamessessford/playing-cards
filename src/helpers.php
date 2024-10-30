@@ -12,7 +12,7 @@ if ( ! function_exists('get_card')) {
         $value = mb_strtolower($card->value->name ?? $card['value']);
 
         return new HtmlString(<<<html
-        <img src='/img/cards/{$value}_of_{$suit}.svg' class='h-24' />
+        <img src='/vendor/playing-cards/{$value}_of_{$suit}.svg' class='h-24' />
         html);
     }
 }
@@ -21,7 +21,7 @@ if ( ! function_exists('card_back')) {
     function card_back(): HtmlString
     {
         return new HtmlString(<<<html
-        <img src='/img/cards/card_back.svg' class='h-24' />
+        <img src='/vendor/playing-cards/card_back.svg' class='h-24' />
         html);
     }
 }
