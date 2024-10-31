@@ -1,6 +1,7 @@
 {
-    "name": "jamessessford/cards",
+    "name": "jamessessford/playing-cards",
     "description": "A PHP implementation of a deck of playing cards to be used with Verbs",
+    "keywords": ["Cards", "Playing Cards", "Verbs"],
     "type": "library",
     "license": "MIT",
     "autoload": {

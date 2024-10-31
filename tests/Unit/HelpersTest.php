@@ -9,7 +9,7 @@ use PlayingCards\Enums\Value;
 test('an image of a card can be requested', function (): void {
     $card = new Card(suit: Suit::Hearts, value: Value::Ace);
 
-    $image = get_card($card);
+    $image = card_front($card);
 
     expect($image->toHtml())
         ->toContain("<img src='/vendor/playing-cards/ace_of_hearts.svg' class='h-24' />");
