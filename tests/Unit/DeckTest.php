@@ -16,6 +16,20 @@ test('a deck can be created', function (): void {
         ->toBe(52);
 });
 
+test('a deck can include jokers', function() : void {
+    $deck = new Deck(
+        includeJokers: true, 
+    );
+
+    expect($deck)
+        ->toHaveProperties(['cards']);
+
+    $cards = invade($deck)->cards;
+
+    expect(count($cards))
+        ->toBe(54);
+});
+
 test('a deck can be shuffled', function (): void {
     $deck = new Deck();
 

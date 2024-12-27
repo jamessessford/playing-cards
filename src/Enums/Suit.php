@@ -10,4 +10,7 @@ enum Suit: string
     case Diamonds = 'Diamonds';
     case Hearts = 'Hearts';
     case Spades = 'Spades';
+
+    case Red = 'Red';
+    case Black = 'Black';
 }

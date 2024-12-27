@@ -19,4 +19,5 @@ enum Value: string
     case Queen = 'Queen';
     case King = 'King';
     case Ace = 'Ace';
+    case Joker = 'Joker';
 }
