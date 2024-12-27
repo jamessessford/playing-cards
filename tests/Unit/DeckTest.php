@@ -16,9 +16,9 @@ test('a deck can be created', function (): void {
         ->toBe(52);
 });
 
-test('a deck can include jokers', function() : void {
+test('a deck can include jokers', function (): void {
     $deck = new Deck(
-        includeJokers: true, 
+        includeJokers: true,
     );
 
     expect($deck)
