@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use PlayingCards\Deck;
+use PlayingCards\Enums\Value;
 
 test('a deck can be created', function (): void {
     $deck = new Deck();
@@ -85,3 +86,30 @@ test('the remaining card count can be queried', function (): void {
     expect($remainingCards)
         ->toBe(51);
 });
+
+test('the deck can be sorted', function(): void {
+
+    $deck = new Deck();
+
+    $deck->shuffle();
+
+    $cards = invade($deck)->cards;
+
+    $cards = $cards->sortByEnumCases('value', Value::class);
+
+    expect(invade($deck)->cards->first()->toArray())
+        ->not
+        ->toEqual($cards->first()->toArray());
+});
+
+test('the deck can\'t be sorted be an enum that doesn\'t exist', function(): void {
+
+    $deck = new Deck();
+
+    $deck->shuffle();
+
+    $cards = invade($deck)->cards;
+
+    $cards = $cards->sortByEnumCases('value', 'x');
+
+})->throws(ErrorException::class, 'Is x an Enum class?');

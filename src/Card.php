@@ -17,4 +17,12 @@ final readonly class Card implements SerializedByVerbs
         public Suit $suit,
         public Value $value,
     ) {}
+
+    public function toArray(): array
+    {
+        return [
+            'suit' => $this->suit->name,
+            'value' => $this->value->name,
+        ];
+    }
 }

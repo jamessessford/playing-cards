@@ -15,6 +15,15 @@ test('an image of a card can be requested', function (): void {
         ->toContain("<img src='/vendor/playing-cards/ace_of_hearts.svg' class='h-24' />");
 });
 
+test('an image of a card can be requested via an array', function (): void {
+    $card = ['suit' => 'Spades', 'value' => 'Ace'];
+
+    $image = card_front($card);
+
+    expect($image->toHtml())
+        ->toContain("<img src='/vendor/playing-cards/ace_of_spades.svg' class='h-24' />");
+});
+
 test('an image of a card back can be requested', function (): void {
     $image = card_back();
 
