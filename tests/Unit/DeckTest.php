@@ -87,7 +87,7 @@ test('the remaining card count can be queried', function (): void {
         ->toBe(51);
 });
 
-test('the deck can be sorted', function(): void {
+test('the deck can be sorted', function (): void {
 
     $deck = new Deck();
 
@@ -102,7 +102,7 @@ test('the deck can be sorted', function(): void {
         ->toEqual($cards->first()->toArray());
 });
 
-test('the deck can\'t be sorted be an enum that doesn\'t exist', function(): void {
+test('the deck can\'t be sorted be an enum that doesn\'t exist', function (): void {
 
     $deck = new Deck();
 
